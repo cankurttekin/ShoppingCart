@@ -1,6 +1,6 @@
 package com.cankurttekin.market.application.service;
 
-import com.cankurttekin.market.domain.model.Product;
+import com.cankurttekin.market.domain.entity.Product;
 import com.cankurttekin.market.domain.repository.ProductRepository;
 import com.cankurttekin.market.domain.exception.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,7 @@
 package com.cankurttekin.market.application.service;
 
-import com.cankurttekin.market.domain.model.Product;
-import com.cankurttekin.market.domain.repository.ProductRepository;
-import org.springframework.stereotype.Service;
+import com.cankurttekin.market.domain.entity.Product;
+
 import java.util.List;
 public interface ProductService {
     List<Product> findAll();

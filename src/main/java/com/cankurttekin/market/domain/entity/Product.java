@@ -1,4 +1,4 @@
-package com.cankurttekin.market.domain.model;
+package com.cankurttekin.market.domain.entity;
 
 import jakarta.persistence.*;
 
