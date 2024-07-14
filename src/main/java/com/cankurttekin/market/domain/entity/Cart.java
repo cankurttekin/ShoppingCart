@@ -21,12 +21,7 @@ public class Cart {
     }
 
     public void addToCart(Product product) {
-        if (product.getPrice() + this.getTotalAmount() <= MAX_TOTAL_AMOUNT
-            && this.products.size() + 1 <= MAX_TOTAL_ITEM) {
-            this.totalAmount += product.getPrice();
-            this.totalQuantity++;
-            this.products.add(product);
-        }
+
     }
 
     public void removeFromCart(int productId) {
