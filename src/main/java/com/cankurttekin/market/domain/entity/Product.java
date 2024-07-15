@@ -2,6 +2,8 @@ package com.cankurttekin.market.domain.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product")
 public class Product {
@@ -17,6 +19,10 @@ public class Product {
 
     @Column(name = "price")
     private double price;  // BigDecimal!
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product") // Bidirectional
+    private List<CartProduct> cartProductList;
 
     public Long getId() {
         return id;
