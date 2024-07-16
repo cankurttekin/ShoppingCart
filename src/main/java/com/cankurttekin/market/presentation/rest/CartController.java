@@ -29,7 +29,7 @@ public class CartController {
     @GetMapping("/{cartId}")
     public ResponseEntity<Map<Product, Integer>> getCart(@PathVariable Long cartId) {
         //return cartService.getCart(cartId).getProducts();
-        return ResponseEntity.ok(cartService.getCart(cartId).getProducts());
+        return ResponseEntity.ok(cartService.findById(cartId).getProducts());
     }
 
     @PostMapping("/addToCart/{cartId}")
@@ -38,5 +38,11 @@ public class CartController {
                                               @RequestParam(name = "quantity", defaultValue = "1") int quantity) {
         cartService.addToCart(cartId, productId, quantity);
         return ResponseEntity.ok("Product added to cart.");
+    }
+
+    @DeleteMapping("/{cartId}")
+    public void removeFromCart(@PathVariable Long cartId,
+                                                          @RequestParam Long productId) {
+        cartService.removeFromCart(cartId, productId, 1);
     }
 }

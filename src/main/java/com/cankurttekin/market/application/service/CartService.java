@@ -15,5 +15,5 @@ public interface CartService {
     void save(Cart cart);
 
     void addToCart(Long cartId, Long productId, int quantity);
-    void removeFromCart(Long cartId, Product product, int quantity) throws CartNotFoundException;
+    void removeFromCart(Long cartId, Long productId, int quantity) throws CartNotFoundException;
 }

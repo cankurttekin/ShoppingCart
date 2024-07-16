@@ -16,20 +16,14 @@ public class CartServiceImpl implements  CartService {
     @Autowired
     private ProductService productService;
 
-    public Cart getCart(Long cartId) {
-        cartRepository.findById(cartId).
-
-                                                //.orElseThrow(() -> new CartNotFoundException("Cart not found"));
-    }
-
     @Override
     public Cart findById(Long id) {
-        return null;
+        return cartRepository.findById(id).orElseThrow(() -> new CartNotFoundException("Cart not found"));
     }
 
     @Override
     public void save(Cart cart) {
-
+        cartRepository.save(cart);
     }
 
     @Override
@@ -44,18 +38,20 @@ public class CartServiceImpl implements  CartService {
     }
 
     @Override
-    public void removeFromCart(Long cartId, Product product, int quantity) throws CartNotFoundException {
-        /*
+    public void removeFromCart(Long cartId, Long productId, int quantity) throws CartNotFoundException {
+
         Cart cart = cartRepository.findById(cartId).orElseThrow();
-        if (cart.getProducts().contains(product.getId())) {
+        if (cart.getProducts().containsKey(productService.findById(productId))) {
             //int newQuantity = cart.getProducts().get(product.()) - quantity;
-            if (newQuantity <= 0) {
-                cart.getProducts().remove(product.getId());
-            } else {
-                cart.getProducts().put(product, newQuantity);
-            }
+//            if (newQuantity <= 0) {
+//                cart.getProducts().remove(product.getId());
+//            } else {
+//                cart.getProducts().put(product, newQuantity);
+//            }
+//            cartRepository.save(cart);
+            cart.getProducts().remove(productService.findById(productId));
             cartRepository.save(cart);
         }
-         */
+
     }
 }
