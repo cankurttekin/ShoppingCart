@@ -1,12 +1,11 @@
 package com.cankurttekin.market.presentation.rest;
 
-import com.cankurttekin.market.application.service.CartService;
+import com.cankurttekin.market.domain.service.CartService;
 import com.cankurttekin.market.domain.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 
 @RestController

@@ -1,8 +1,7 @@
-package com.cankurttekin.market.application.service;
+package com.cankurttekin.market.domain.service;
 
 import com.cankurttekin.market.domain.entity.Cart;
-import com.cankurttekin.market.domain.entity.Product;
-import com.cankurttekin.market.domain.exception.CartNotFoundException;
+import com.cankurttekin.market.domain.service.exception.CartNotFoundException;
 
 public interface CartService {
     // CONSTRAINS

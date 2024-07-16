@@ -1,6 +1,6 @@
 package com.cankurttekin.market.presentation.rest;
 
-import com.cankurttekin.market.application.service.ProductService;
+import com.cankurttekin.market.domain.service.ProductService;
 import com.cankurttekin.market.domain.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

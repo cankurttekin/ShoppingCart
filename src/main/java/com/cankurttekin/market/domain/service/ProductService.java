@@ -1,4 +1,4 @@
-package com.cankurttekin.market.application.service;
+package com.cankurttekin.market.domain.service;
 
 import com.cankurttekin.market.domain.entity.Product;
 

@@ -2,13 +2,15 @@ package com.cankurttekin.market.application.service;
 
 import com.cankurttekin.market.domain.entity.Cart;
 import com.cankurttekin.market.domain.entity.Product;
-import com.cankurttekin.market.domain.exception.CartNotFoundException;
+import com.cankurttekin.market.domain.service.exception.CartNotFoundException;
+import com.cankurttekin.market.domain.service.CartService;
+import com.cankurttekin.market.domain.service.ProductService;
 import com.cankurttekin.market.infrastructure.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CartServiceImpl implements  CartService {
+public class CartServiceImpl implements CartService {
 
     @Autowired
     private CartRepository cartRepository;
