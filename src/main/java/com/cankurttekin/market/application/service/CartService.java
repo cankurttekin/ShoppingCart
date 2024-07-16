@@ -11,10 +11,9 @@ public interface CartService {
     double MAX_TOTAL_AMOUNT = 500000.0;
 
     // METHODS
-    Cart getCart(Long cartId);
+    Cart findById(Long id);
+    void save(Cart cart);
+
     void addToCart(Long cartId, Long productId, int quantity);
-
     void removeFromCart(Long cartId, Product product, int quantity) throws CartNotFoundException;
-
-    //List<Product> showProducts();
 }

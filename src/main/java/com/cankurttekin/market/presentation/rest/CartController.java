@@ -1,8 +1,6 @@
 package com.cankurttekin.market.presentation.rest;
 
 import com.cankurttekin.market.application.service.CartService;
-import com.cankurttekin.market.domain.entity.Cart;
-import com.cankurttekin.market.domain.entity.CartProduct;
 import com.cankurttekin.market.domain.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,12 +27,16 @@ public class CartController {
     */
 
     @GetMapping("/{cartId}")
-    public List<CartProduct> getCart(@PathVariable Long cartId) {
-        return cartService.getCart(cartId).getProducts();
+    public ResponseEntity<Map<Product, Integer>> getCart(@PathVariable Long cartId) {
+        //return cartService.getCart(cartId).getProducts();
+        return ResponseEntity.ok(cartService.getCart(cartId).getProducts());
     }
 
     @PostMapping("/addToCart/{cartId}")
-    public void addToCart(@PathVariable Long cartId, @RequestParam Long productId, @RequestParam int quantity) {
+    public ResponseEntity<String> addToCart(@PathVariable Long cartId,
+                                              @RequestParam Long productId,
+                                              @RequestParam(name = "quantity", defaultValue = "1") int quantity) {
         cartService.addToCart(cartId, productId, quantity);
+        return ResponseEntity.ok("Product added to cart.");
     }
 }

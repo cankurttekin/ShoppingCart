@@ -21,8 +21,8 @@ public class Product {
     private double price;  // BigDecimal!
 
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product") // Bidirectional
-    private List<CartProduct> cartProductList;
+    //@OneToMany(cascade = CascadeType.ALL, mappedBy = "product") // Bidirectional
+    //private List<CartProduct> cartProductList;
 
     public Long getId() {
         return id;
