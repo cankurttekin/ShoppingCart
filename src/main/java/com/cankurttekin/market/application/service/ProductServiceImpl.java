@@ -2,7 +2,8 @@ package com.cankurttekin.market.application.service;
 
 import com.cankurttekin.market.domain.entity.Product;
 import com.cankurttekin.market.domain.service.ProductService;
-import com.cankurttekin.market.infrastructure.repository.ProductRepository;
+//import com.cankurttekin.market.infrastructure.repository.ProductRepository; // REFACTORED
+import com.cankurttekin.market.domain.repository.ProductRepository;
 import com.cankurttekin.market.domain.service.exception.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

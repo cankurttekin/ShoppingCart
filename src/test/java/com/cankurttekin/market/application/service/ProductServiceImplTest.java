@@ -2,7 +2,7 @@ package com.cankurttekin.market.application.service;
 
 import com.cankurttekin.market.domain.entity.Product;
 import com.cankurttekin.market.domain.service.exception.ProductNotFoundException;
-import com.cankurttekin.market.infrastructure.repository.ProductRepository;
+import com.cankurttekin.market.infrastructure.repository.JpaProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -20,7 +20,7 @@ import static org.mockito.Mockito.*;
 
 class ProductServiceImplTest {
     @Mock
-    private ProductRepository productRepository;
+    private JpaProductRepository productRepository;
 
     @InjectMocks
     private ProductServiceImpl productService;

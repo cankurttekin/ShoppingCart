@@ -5,7 +5,8 @@ import com.cankurttekin.market.domain.entity.Product;
 import com.cankurttekin.market.domain.service.exception.CartNotFoundException;
 import com.cankurttekin.market.domain.service.CartService;
 import com.cankurttekin.market.domain.service.ProductService;
-import com.cankurttekin.market.infrastructure.repository.CartRepository;
+//import com.cankurttekin.market.infrastructure.repository.CartRepository;  // REMOVED DEPENDENCY TO UPPER LAYER INFRA. TO FOLLOW ONION ARCHITECTURE
+import com.cankurttekin.market.domain.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

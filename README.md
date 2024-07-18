@@ -14,7 +14,7 @@ A Web API developed using **Spring Boot**, **Spring Data JPA** and **Spring Secu
 - Design Patterns
 
   
-<img src="architecture.png"
+<img src="architecture-of-project"
      alt="Architecture"
      height="">
 
