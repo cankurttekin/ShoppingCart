@@ -14,7 +14,7 @@ A Web API developed using **Spring Boot**, **Spring Data JPA** and **Spring Secu
 - Design Patterns
 
   
-<img src="architecture-of-project"
+<img src="architecture-of-project.png"
      alt="Architecture"
      height="">
 
@@ -60,6 +60,11 @@ ROLE=EMPLOYEE
 
 </details>
 
+###
+
+<img src="tests.png"
+     alt="Tests"
+     height="">
 
 ## Database
 Role and users are in two tables with passwords stored as **bcrytp hash**, primary key being user_id in a members table.
