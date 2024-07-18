@@ -1,6 +1,6 @@
 # Market
  
-A Web API developed using **Spring Boot**, **Spring Data JPA** and **Spring Security** using Onion Architecture.
+A Web API developed using **Spring Boot**, **Spring Data JPA** and **Spring Security** following Onion Architecture and other useful design patterns.
 
 ##
 - Java 17
@@ -14,7 +14,7 @@ A Web API developed using **Spring Boot**, **Spring Data JPA** and **Spring Secu
 - Design Patterns
 
   
-<img src="architecture-of-project.png"
+<img src="/assets/architecture-of-project.png"
      alt="Architecture"
      height="">
 
@@ -62,7 +62,7 @@ ROLE=EMPLOYEE
 
 ###
 
-<img src="tests.png"
+<img src="/assets/tests.png"
      alt="Tests"
      height="">
 
